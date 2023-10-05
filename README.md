@@ -11,7 +11,7 @@ The details of processing logics and algorithms will be updated later.
 ---
 
 ## Suported GNSS Receivers:
-1. Novatel OEM7
+1. NovAtel OEM7 (e.g., pwrpak7 or span)
 2. Ublox F9P (still in progress)
 
 ---

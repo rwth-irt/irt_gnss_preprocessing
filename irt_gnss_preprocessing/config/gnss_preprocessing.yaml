@@ -1,0 +1,118 @@
+---
+/irt_gnss_preprocessing/irt_gnss_preprocessing:
+    ros__parameters:
+        use_sim_time: true
+        GNSSPreprocessor:
+            gnss_receiver_handler:           'NovatelOEM7'
+            NLOSCSVFilePath:                 ""
+            publish_gnss_obs:                true
+            user_estimation_from_topic:      true
+            default_buffer_size:             5
+            buffer_size:                     [10]
+            enable_gnss_merge:               false       # if enabled, dual-constellation will be done if galileo is enabled
+            enable_dual_antenna_dd:          true
+            enable_rtcm_dd:                  true
+            print_info_duration:             1.
+            msg_lower_bound:                 50000000   # nanoseconds defualt: 50000000
+            range_sync_queue_size:           10
+            solution_sync_queue_size:        10
+            antenna_heading_offset:          -90.
+
+        CommonGNSSParameters:
+            enable_galileo_timebase:         false
+            enable_differential_correction:  true
+            enable_tropospheric_correction:  false
+            enable_ionospheric_correction:   false
+            enable_SatPosVel_calculation:    true
+            enable_WL_correction:            false
+            elevation_mask:                  15.
+            ggto_sync_mode:                  0       # mode of ggto sync
+            use_mode_switch_logic:           false
+
+        CommonGPSParameters:
+            enable: true
+            enable_l1: true
+            enable_l2: false
+
+        CommonGalileoParameters:
+            enable: true
+            enable_e1: true
+            enable_e5: false
+            enable_e5a: false
+            enable_e5b: false
+
+        CommonGateParameters:
+            enable: false
+            prn_flags: [ 0., 0., 0., 0., 0., 0., 0., 0., 0. ]
+
+        DDRTCMGNSSParameters:
+            enable_galileo_timebase: false
+            enable_differential_correction: false
+            enable_tropospheric_correction: false
+            enable_ionospheric_correction: false
+            enable_SatPosVel_calculation: true
+            enable_WL_correction: false
+            elevation_mask: 15.
+            ggto_sync_mode: 1       # mode of ggto sync
+            use_mode_switch_logic: false
+
+        DDRTCMGPSParameters:
+            enable: true
+            enable_l1: true
+            enable_l2: false
+
+        DDRTCMGalileoParameters:
+            enable: false
+            enable_e1: false
+            enable_e5: false
+            enable_e5a: false
+            enable_e5b: false
+
+        DDRTCMGateParameters:
+            enable: false
+            prn_flags: [ 0., 0., 0., 0., 0., 0., 0., 0., 0. ]
+
+        DDDualAntennaGNSSParameters:
+            enable_galileo_timebase: false
+            enable_differential_correction: false
+            enable_tropospheric_correction: false
+            enable_ionospheric_correction: false
+            enable_SatPosVel_calculation: true
+            enable_WL_correction: false
+            elevation_mask: 15.
+            ggto_sync_mode: 1       # mode of ggto sync
+            use_mode_switch_logic: false
+
+        DDDualAntennaGPSParameters:
+            enable: true
+            enable_l1: true
+            enable_l2: false
+
+        DDDualAntennaGalileoParameters:
+            enable: false
+            enable_e1: false
+            enable_e5: false
+            enable_e5a: false
+            enable_e5b: false
+
+        DDDualAntennaGateParameters:
+            enable: false
+            prn_flags: [ 0., 0., 0., 0., 0., 0., 0., 0., 0. ]
+
+        IntegrityParametersCommon:
+            enable:                          true
+            enable_gnss_exclusion:           true
+            enable_imu_exclusion:            true
+            enable_dvl_exclusion:            true
+
+        RAIMParameters:
+            hal:                             25
+            p_fa:                            0.000006
+            p_md:                            0.001
+            p_bayes_threshold:               1.
+            tta:                             0.
+            tte:                             1.
+            max_num_obs:                     40
+            num_var:                         4
+            max_num_to_identify_onde:        1
+            variance_mode:                   1

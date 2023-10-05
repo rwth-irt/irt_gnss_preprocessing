@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>irt_gnss_preprocessing</name>
+  <version>0.0.0</version>
+  <description>TODO: Package description</description>
+  <maintainer email="h.zhang@irt.rwth-aachen.de">haoming</maintainer>
+  <license>apache2</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>pluginlib</depend>
+  <depend>std_msgs</depend>
+  <depend>irt_nav_msgs</depend>
+  <depend>novatel_oem7_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>rclcpp_components</depend>
+  <depend>irt_nav_common</depend>
+
+  <depend>ublox_msgs</depend>
+  <depend>ublox_serialization</depend>
+
+  <depend>message_filters</depend>
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+
+# jetbrain caches
+cmake-build-*
+.idea
+

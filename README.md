@@ -10,6 +10,17 @@ The details of processing logics and algorithms will be updated later.
 
 ---
 
+## Dependencies:
+1. [ros2](https://docs.ros.org/en/rolling/Installation.html)
+2. [irt_nav_common](https://github.com/rwth-irt/irt_nav_common)
+3. [GTSAM](https://github.com/borglab/gtsam) (dependency will be removed in next push)
+4. [Eigen3](https://eigen.tuxfamily.org/)
+5. [novatel_oem7_msgs](https://github.com/rwth-irt/novatel_oem7_driver)
+6. [ublox_msgs](https://github.com/rwth-irt/ublox)
+7. [ublox_serialization](https://github.com/rwth-irt/ublox)
+
+---
+
 ## Suported GNSS Receivers:
 1. NovAtel OEM7 (e.g., pwrpak7 or span)
 2. Ublox F9P (still in progress)
